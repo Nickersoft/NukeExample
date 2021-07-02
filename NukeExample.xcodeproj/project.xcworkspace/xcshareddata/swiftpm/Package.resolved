@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Nuke",
+        "repositoryURL": "git@github.com:kean/Nuke.git",
+        "state": {
+          "branch": null,
+          "revision": "69ae6d5b8c4b898450432f94bd35f863d3830cfc",
+          "version": "10.3.0"
+        }
+      },
+      {
+        "package": "Resolver",
+        "repositoryURL": "git@github.com:hmlongco/Resolver.git",
+        "state": {
+          "branch": null,
+          "revision": "48e26b8fdf22877cd89b4a1f3927a56cc9f34d46",
+          "version": "1.4.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

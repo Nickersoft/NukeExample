@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,14 @@
 		40D0B199268F7A4000FFEB4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D0B184268F7A3E00FFEB4F /* ContentView.swift */; };
 		40D0B19A268F7A4000FFEB4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40D0B185268F7A4000FFEB4F /* Assets.xcassets */; };
 		40D0B19B268F7A4000FFEB4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40D0B185268F7A4000FFEB4F /* Assets.xcassets */; };
+		40D0B1A5268F7A7300FFEB4F /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D0B1A4268F7A7300FFEB4F /* Interactor.swift */; };
+		40D0B1A6268F7A7300FFEB4F /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D0B1A4268F7A7300FFEB4F /* Interactor.swift */; };
+		40D0B1A9268F7AB000FFEB4F /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 40D0B1A8268F7AB000FFEB4F /* Nuke */; };
+		40D0B1AB268F7C5000FFEB4F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D0B1AA268F7C5000FFEB4F /* ViewModel.swift */; };
+		40D0B1AC268F7C5000FFEB4F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D0B1AA268F7C5000FFEB4F /* ViewModel.swift */; };
+		40D0B1AF268F89A900FFEB4F /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 40D0B1AE268F89A900FFEB4F /* Resolver */; };
+		40D0B1B1268F89B700FFEB4F /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D0B1B0268F89B700FFEB4F /* Registration.swift */; };
+		40D0B1B2268F89B700FFEB4F /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D0B1B0268F89B700FFEB4F /* Registration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,9 @@
 		40D0B192268F7A4000FFEB4F /* NukeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NukeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40D0B194268F7A4000FFEB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40D0B195268F7A4000FFEB4F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		40D0B1A4268F7A7300FFEB4F /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		40D0B1AA268F7C5000FFEB4F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		40D0B1B0268F89B700FFEB4F /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40D0B1AF268F89A900FFEB4F /* Resolver in Frameworks */,
+				40D0B1A9268F7AB000FFEB4F /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +73,9 @@
 				40D0B183268F7A3E00FFEB4F /* NukeExampleApp.swift */,
 				40D0B184268F7A3E00FFEB4F /* ContentView.swift */,
 				40D0B185268F7A4000FFEB4F /* Assets.xcassets */,
+				40D0B1A4268F7A7300FFEB4F /* Interactor.swift */,
+				40D0B1AA268F7C5000FFEB4F /* ViewModel.swift */,
+				40D0B1B0268F89B700FFEB4F /* Registration.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -106,6 +122,10 @@
 			dependencies = (
 			);
 			name = "NukeExample (iOS)";
+			packageProductDependencies = (
+				40D0B1A8268F7AB000FFEB4F /* Nuke */,
+				40D0B1AE268F89A900FFEB4F /* Resolver */,
+			);
 			productName = "NukeExample (iOS)";
 			productReference = 40D0B18A268F7A4000FFEB4F /* NukeExample.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +173,10 @@
 				Base,
 			);
 			mainGroup = 40D0B17D268F7A3E00FFEB4F;
+			packageReferences = (
+				40D0B1A7268F7AB000FFEB4F /* XCRemoteSwiftPackageReference "Nuke" */,
+				40D0B1AD268F89A900FFEB4F /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
 			productRefGroup = 40D0B18B268F7A4000FFEB4F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,7 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40D0B1A5268F7A7300FFEB4F /* Interactor.swift in Sources */,
 				40D0B198268F7A4000FFEB4F /* ContentView.swift in Sources */,
+				40D0B1AB268F7C5000FFEB4F /* ViewModel.swift in Sources */,
+				40D0B1B1268F89B700FFEB4F /* Registration.swift in Sources */,
 				40D0B196268F7A4000FFEB4F /* NukeExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,7 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40D0B1A6268F7A7300FFEB4F /* Interactor.swift in Sources */,
 				40D0B199268F7A4000FFEB4F /* ContentView.swift in Sources */,
+				40D0B1AC268F7C5000FFEB4F /* ViewModel.swift in Sources */,
+				40D0B1B2268F89B700FFEB4F /* Registration.swift in Sources */,
 				40D0B197268F7A4000FFEB4F /* NukeExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +469,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40D0B1A7268F7AB000FFEB4F /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.3.0;
+			};
+		};
+		40D0B1AD268F89A900FFEB4F /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40D0B1A8268F7AB000FFEB4F /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40D0B1A7268F7AB000FFEB4F /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		40D0B1AE268F89A900FFEB4F /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40D0B1AD268F89A900FFEB4F /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 40D0B17E268F7A3E00FFEB4F /* Project object */;
 }

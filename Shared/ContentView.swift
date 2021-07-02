@@ -6,11 +6,34 @@
 //
 
 import SwiftUI
+import Resolver
+
+struct Item: Hashable, Equatable, Identifiable {
+    var id: String
+    var image: UIImage
+}
 
 struct ContentView: View {
+
+    @InjectedObject var viewModel: ViewModel
+
+    @Injected var interactor: Interator
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Button("Reload") {
+                viewModel.tapped = true
+            }
+            List {
+                ForEach(viewModel.images) { img in
+                    Image(uiImage: img.image)
+                }
+            }
+            .onAppear {
+                interactor.loadImages()
+            }
+        }
+
     }
 }
 
